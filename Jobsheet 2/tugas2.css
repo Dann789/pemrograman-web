@@ -1,46 +1,88 @@
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ddd;
-    line-height: 1.65;
-    padding-bottom: 1000px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgrey;
+  line-height: 1.65;
+  padding-bottom: 1000px;
+  color: #e3e5ea;
 }
 
 .container-satu {
-    display: flex;
-    justify-content: center;
-    width: 800px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .sidebar-satu {
-    order: -1;
-    width: 230px;
-    background-color: blue;
-    margin-right: 20px;
-    padding: 0 15px 0 15px;
+  order: -1;
+  width: 260px;
+  background-color: #2468f5;
+  margin-right: 20px;
+  padding: 0 15px 0 15px;
 }
 
-h2, h3 {
-    text-align: center;
+h2,
+h3 {
+  text-align: center;
+  background-color: #91aadd;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #e3e5ea;
+  text-decoration: none;
+}
+
+li a {
+    position: relative;
+}
+
+li a:hover {
+  color: white;
+}
+
+/* Pengaturan Animasi hover line dari kiri ke kanan*/
+li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+li a:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .kolom-utama {
-    background-color: aqua;
-    width: 500px;
-    padding: 0 15px 0 15px;
-    margin-right: 20px;
+  background-color: #365491;
+  width: 750px;
+  padding: 0 15px 0 15px;
+  margin-right: 20px;
 }
 
 .sidebar-dua {
-    width: 260px;
-    background-color: blueviolet;
-    padding: 0 15px 0 15px;
+  width: 300px;
+  background-color: #2468f5;
+  padding: 0 15px 0 15px;
 }
