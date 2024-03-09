@@ -1,5 +1,5 @@
 <?php
-$nilaiSiswa = [85, 92, 58, 64, 90, 55, 88, 79, 70, 96];
+$nilaiSiswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
 
 $nilaiTinggiPertama = 0;
 $nilaiTinggiKedua = 0;
@@ -27,6 +27,11 @@ $totalNilai = array_sum($nilaiSiswa) - ($nilaiTinggiPertama + $nilaiTinggiKedua 
 $jumlahNilai = count($nilaiSiswa) - 4;
 
 $rataRata = $totalNilai / $jumlahNilai;
+
+echo "Nilai Tertinggi Pertama $nilaiTinggiPertama <br>";
+echo "Nilai Tertinggi Kedua $nilaiTinggiKedua <br>";
+echo "Nilai Terendah Pertama $nilaiRendahPertama <br>";
+echo "Nilai Terendah Kedua $nilaiRendahKedua <br>";
 
 echo "Nilai rata-rata setelah mengabaikan dua nilai tertinggi dan terendah adalah: " . round($rataRata, 2);
 
