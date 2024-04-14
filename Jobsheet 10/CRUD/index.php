@@ -26,14 +26,14 @@
                          <td>" . $kelamin . "</td><td>" . $row["alamat"] . "</td>
                          <td>" . $row["no_telp"] . "</td>
                          <td><a href='edit.php?id=" . $row["id"] . "'>Edit</a> |
-                         <a href='#' onclick='konfirmasiHapus(" . $row["id"] . ", \"" . $row["nama"] . "\"'>Hapus</a></td>
+                         <a href='#' onclick='konfirmasiHapus(" . $row["id"] . ", \"" . $row["nama"] . "\")'>Hapus</a></td>
                          </tr>";
                 }
                 echo "</table>";
             } else {
                 echo "Tidak ada data.";
             }
-            mysqli_close($koneksi)
+            mysqli_close($koneksi);
             ?>
         </div>
         <script>
