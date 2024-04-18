@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Bebas Bersuara</title>
+    <title>Bagian Complaint</title>
     <link rel="stylesheet" href="css/styleHalaman.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
@@ -18,7 +18,7 @@
                 <a href="halamanUser.html">Home</a>
             </li>
             <li>
-                <a href="#about">About</a>
+                <a href="halamanUser.html#about">About</a>
             </li>
             <li>
                 <a href="complaint.html">Complaint</a>
@@ -30,24 +30,33 @@
     </nav>
 
     <main>
-        <section id="home">
-            <div class="container1">
-                <div class="content">
-                    <h1>Selamat Datang Di Website Bebas Bersuara</h1>
-                    <p>Anda memiliki masalah atau keluhan? Bisa mengajukan pada bagian Complaint.</p>
-                    <p>Atau klik tombol di bawah ini.</p>
-                    <a href="complaint.html"><button>Ajukan Komplain</button></a>
+        <div class="container-form">
+            <form action="proses_complaint.php?action=tambah" method="post" id="form-comp">
+                <h1 id="judul-form">Form Complaint</h1>
+                <hr>
+                <div class="input-data">
+                    <label for="nama">Nama</label>
+                    <input type="text" name="nama" id="nama">
                 </div>
-            </div>
-        </section>
 
-        <section id="about">
-            <div class="content2">
-                <h1>About Us</h1>
-                <p>Website Bebas Bersuara merupakan sebuah platform yang memungkinkan anda untuk menyampaikan pendapat dan keluhan anda. 100% tanpa biaya alias gratis.</p>
-            </div>
-            <img src="assets/speak.jpg" alt="speak" width="25%" height="25%">
-        </section>
+                <div class="input-data">
+                    <label for="alamat">Alamat</label>
+                    <input type="text" name="alamat" id="alamat">
+                </div>
+
+                <div class="input-data">
+                    <label for="nama">No Telp</label>
+                    <input type="text" name="no_telp" id="no_telp">
+                </div>
+
+                <div class="input-data">
+                    <label for="nama">Pengaduan</label>
+                    <textarea name="isi_pengaduan" id="isi_pengaduan" cols="35" rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="btn-form">Kirim</button>
+            </form>
+        </div>
     </main>
 
     <footer>

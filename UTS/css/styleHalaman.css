@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,20 +10,23 @@ body {
     scroll-behavior: smooth;
 }
 
-.bg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: -1;
+main {
+    display: flex;
+    flex-direction: column;
 }
 
-.bg img {
+#home {
+    background-image: url(../assets/demo.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    position: relative;
+    margin: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(40%);
+}
+
+.container1 {
+    padding: 50px;
 }
 
 #judul {
@@ -63,9 +67,26 @@ nav ul li a{
     border-bottom: 1px solid rgba(255, 68, 0, 0);
 }
 
-nav ul li a:hover {
+nav ul li:not(:last-child) a:hover {
     border-bottom: 1px solid black;
     color: black;
+}
+
+nav ul li button {
+    padding: 18px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    background-color: #8f8585;
+    color: white;
+}
+
+nav ul li button:hover {
+    transform: scale(1.1);
+    background-color: rgb(163, 163, 163);
 }
 
 main {
@@ -81,20 +102,21 @@ main {
     background-color: gainsboro;
     border-radius: 25px;
     margin-bottom: 20px;
+    z-index: -2;
 }
 
 .content h1 {
-    font-size: xx-large;
+    font-size: 50px;
     padding-bottom: 15px;
 }
 
 .content p{
-    font-size: 18px;
+    font-size: 22px;
     padding-bottom: 15px;
 }
 
 .content button {
-    font-size: 15px;
+    font-size: 17px;
     margin-top: 10px;
     padding: 15px;
     border-radius: 20px;
@@ -107,6 +129,35 @@ main {
     transform: scale(1.1);
     background-color: rgb(163, 163, 163);
     color: white;
+}
+
+.content2 {
+    margin: 15px 0px;
+    background-color: gainsboro;
+    padding: 50px;
+    border-radius: 25px;
+    width: 50%;
+}
+
+#about {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 35px 0px 
+}
+
+#about img {
+    margin: 15px 0;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+#about h1 {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+#about p {
+    font-size: 18px;
 }
 
 footer {
@@ -137,4 +188,140 @@ footer div img {
     align-items: center;
     width: 50%;
     gap: 32px;
+}
+
+/*Halaman Complaint*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form {
+    background-color: gainsboro;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.input-data {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+label {
+    padding-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+
+.btn-form {
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.btn-form:hover {
+    background-color: grey;
+    color: white;
+}
+
+#judul-form{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.input-data:first-of-type {
+    margin-top: 20px;
+}
+
+/*Halaman Admin*/
+#content-admin {
+    display: flex;
+    justify-content: space-between;
+}
+
+#inbox {
+    background-color: gainsboro;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#inbox, #tanggapan {
+    width: 48%;
+    margin-bottom: 45px;
+}
+
+#inbox h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#inbox table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#inbox th, #inbox td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#inbox th {
+    background-color: #f2f2f2;
+}
+
+#tanggapan {
+    padding: 20px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    background-color: #E9DCBE;
+}
+
+#tanggapan label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#tanggapan input[type="text"],
+#tanggapan textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#tanggapan textarea {
+    resize: vertical;
+    background-color: white;
+}
+
+#inbox th, tr, td {
+    text-align: center;
+}
+
+#tanggapan h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#btn-tanggapan {
+    padding: 15px 20px;
+    border-radius: 35px;
+    border-style: none;
+    background-color: #adaba4;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+#btn-tanggapan:hover {
+    transform: scale(1.1);
+    background-color: rgb(158, 156, 156);
+    color: white;
 }

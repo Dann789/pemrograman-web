@@ -10,8 +10,9 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(63,94,251);
-    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
 }
 
 .box {
@@ -119,6 +120,11 @@ body {
     font-size: 16px;
     color: #333;
     font-weight: 600;
+}
+
+.btn {
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .box .register {
